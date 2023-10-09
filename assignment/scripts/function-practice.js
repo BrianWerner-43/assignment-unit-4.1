@@ -139,6 +139,28 @@ console.log('These are the the positive numbers:', allPositive([12, 9, -4, 6, -7
 //     here in a comment, write the function, and test it!
 
 
+// A problem from codewars: 
+//Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+// created a function called evenOrOdd with number as a parameter
+// Then write a conditional that uses the % operator that returns the remainder when number is divided by 2
+// If remainder is 0, then number can be evenly divided by 2 which will return  a string'Even'
+// and if remainder is not 0, number can't be divided evenly by 2 and get a return  a string'Odd'
+
+
+function evenOrOdd(number) {
+  if (number % 2 === 0) {
+    return 'Even';
+  } else {
+    return 'Odd';
+  }
+};
+// Invoking the function to check if this number is 'Even'
+console.log('This number should be even:', evenOrOdd(6));
+// Invoking the function to check if this number is 'Odd
+console.log('This number should be odd:', evenOrOdd(3));
+
+
 // DO NOT MODIFY
 // Used for automated testing
 try {
