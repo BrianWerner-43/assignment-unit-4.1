@@ -47,8 +47,8 @@ function isPositive(number) {
 };
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-console.log('This number should be true:', isPositive(8));
-console.log('This number should be false:', isPositive(-4));
+console.log('The number 8 should be true:', isPositive(8));
+console.log('The number -4 should be false:', isPositive(-4));
 
 
 
@@ -89,24 +89,49 @@ console.log('This value should be false:', find(3, [5, 7, 9, 11]));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
+  if (string[0] === letter) {
+    return true;
+  }
+  else {
+    return false;
+  }
 
-}
+};
+console.log('First letter should be true:', isFirstLetter('B', 'Banana'));
+console.log('First letter should be false:', isFirstLetter('D', 'Banana'));
 
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll() {
+// creating a global variable named numArray that is equal to an array. [7, 13, 8, 12];
+let numArray = [7, 13, 8, 12];
+function sumAll(numArray) {
   let sum = 0;
   // TODO: loop to add items
+  for (let i = 0; i < numArray.length; i++) {
+    sum = sum + numArray[i];
 
+  }
   // TODO: return the sum
-}
+  return sum;
+};
+console.log('The total sum of numArray is:', sumAll(numArray));
+
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive() {
 
-}
+function allPositive(array) {
+  const inputArray = [];
+  for (let i = 0; i <array.length; i++) {
+    if (array[i] > 0) {
+      inputArray.push(array[i]);
+    }
+  } return inputArray;
+};
+console.log('These are the the positive numbers:', allPositive([12, 9, -4, 6, -7]));
+  
+
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
