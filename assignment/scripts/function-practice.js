@@ -41,26 +41,47 @@ console.log('Multiplying 3 nums together: 5 * 8 * 9 =:', multiplyThree(5, 8, 9))
 //    or greater than zero, and false otherwise
 function isPositive(number) {
   if (number > 0) {
-    return;
+    return true;
   }
-  return;
-}
+  return false;
+};
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
+console.log('This number should be true:', isPositive(8));
+console.log('This number should be false:', isPositive(-4));
+
+
 
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
+let array = ['Socks', 'Shirt', 'Pants', 'Hoodie'];
 function getLast(array) {
+  if (array.length === 0) {
+    return undefined;
+  } else {
+    return array[array.length -1];
+  }
 
-}
+};
+console.log('Last item in array is:', getLast(array));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(value, array) {
 
-}
+function find(value, array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return true;
+    }
+  }
+  return false;
+  
+  
+};
+console.log('This value should be true:', find(4, [4, 6, 8, 10]));
+console.log('This value should be false:', find(3, [5, 7, 9, 11]));
 
 // ----------------------
 // Stretch Goals
